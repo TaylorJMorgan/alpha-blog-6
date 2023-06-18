@@ -5,6 +5,8 @@ ruby '3.2.2'
 
 gem 'psych', '< 4'
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0.5'
 # Use sqlite3 as the database for Active Record
