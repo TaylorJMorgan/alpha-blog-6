@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = User.first # This is hardcoded for now, REMOVE this later!
     if @article.save
       flash[:notice] = "Article was created successfully."
       redirect_to @article
