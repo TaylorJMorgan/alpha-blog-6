@@ -14,7 +14,9 @@
           Articles
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+          <% if logged_in? %>
+            <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+          <% end %>  
           <%= link_to "View articles", articles_path, class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
@@ -36,7 +38,6 @@
           <%= link_to 'Sign up', signup_path, class: "nav-link" %>
         </li>
       <% end %>
-
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
